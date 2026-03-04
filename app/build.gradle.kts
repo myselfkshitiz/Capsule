@@ -64,18 +64,18 @@ android {
         abi {
             isEnable = true
             reset()
-            include("arm64-v8a")
-            isUniversalApk = false
+            include("armeabi-v7a", "arm64-v8a", "x86", "x86_64") 
+            isUniversalApk = true
         }
     }
+
 
     applicationVariants.all {
         outputs.all {
             val output = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
-            val abi = output.filters.find { it.filterType == "ABI" }?.identifier
-            if (abi != null) {
-                outputFileName = "Capsule-v${defaultConfig.versionName}-$abi.apk"
-            }
+            val abi = output.filters.find { it.filterType == "ABI" }?.identifier ?: "universal"
+            
+            outputFileName = "Capsule-v${defaultConfig.versionName}-$abi-foss.apk"
         }
     }
 
