@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Capsule</string>
+    <string name="accessibility_desc">Displays a custom time capsule pill in the status bar area.</string>
+</resources>

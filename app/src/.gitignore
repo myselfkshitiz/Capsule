@@ -1,0 +1,27 @@
+# IDE & AndroidIDE
+.idea/
+.gradle/
+.androidide/
+local.properties
+captures/
+.externalNativeBuild
+.cxx
+*.iml
+
+# Build Outputs
+build/
+app/build/
+/*/build/
+bin/
+gen/
+
+# Signing Keys (CRITICAL)
+voyager-release.jks
+*.jks
+*.keystore
+
+# Logs & OS Files
+*.log
+.DS_Store
+.last_build_id
+
