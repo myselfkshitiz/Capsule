@@ -25,3 +25,4 @@ voyager-release.jks
 .DS_Store
 .last_build_id
 
+.androidide/
